@@ -1,0 +1,25 @@
+<form [formGroup]="subForm" id="form" class="home-form">
+  <div class="form-group">
+    <!-- <select name="cate" class="form-section" (change)="changeVal($event)" formControlName="searchDropdown">
+      <option *ngFor="let val of searchSelect" [ngValue]="val">{{val}}</option>
+      <option></option>
+    </select> -->
+    <select class="custom-select" (change)="changeProductDropdown($event)" formControlName="items">
+   <option value="" disabled>Choose your prod</option>
+   <option *ngFor="let prod of productDropdown" [ngValue]="prod">{{prod}}</option>
+</select>
+  </div>
+  <div class="form-input">
+    <input
+      list="SubCates"
+      name="subCate"
+      class="input-field"
+      formControlName="subCate"
+    />
+  </div>
+  <button type="submit" class="btn" (click)="onSearch()">
+    <span class="glyphicon glyphicon-search">
+      <i class="fa fa-search"></i></span
+    >
+  </button>
+</form>

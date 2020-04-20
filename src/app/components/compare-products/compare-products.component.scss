@@ -1,0 +1,51 @@
+.compare {
+  height: 100vh;
+  margin-top: -30px;
+  background-color: #fff;
+  border: 1px solid blue;
+  overflow-y: scroll;
+}
+.main-div {
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 40px;
+  display: flex;
+}
+button {
+  border: none;
+  background: #4b5f88;
+  padding: 5px 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fa {
+    margin-top: -5px;
+    margin-left: 5px;
+  }
+}
+
+.item-img {
+  width: 150px;
+  height: 150px;
+  margin-left: 40px;
+}
+.left-side {
+  margin-top: 210px;
+  width: 20%;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.title {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0px 0 0 5px;
+  background-color: #fff !important;
+  width: 100%;
+}
+.right-table {
+  border: 1px solid #ccc;
+}
+.td {
+  padding: 7px;
+}

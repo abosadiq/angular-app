@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand" *ngIf="currentUser">
+  <div class="mynav">
+    <div>
+      <img src="../../../assets/jooleLogo.png" width="100px" height="70px" />
+    </div>
+    <div class="search-bar">
+      <app-searchbar></app-searchbar>
+    </div>
+
+    <div>
+      <button class="btn text-white" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</nav>

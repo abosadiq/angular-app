@@ -1,0 +1,132 @@
+.product-details {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow-y: scroll;
+  padding: 0;
+  margin-top: -30px;
+}
+.selected-info {
+  margin-left: 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  color: #3b5998;
+  font-weight: bold;
+  span {
+    color: #999;
+  }
+}
+.top-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--1 {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    p {
+      margin-top: 20px;
+    }
+    .specifications {
+      margin-left: 30px;
+      color: red;
+    }
+  }
+  button {
+    margin-right: 20px;
+    border: none;
+    background: #4b5f88;
+    padding: 5px 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fa {
+      margin-top: -5px;
+      margin-left: 5px;
+    }
+  }
+}
+.buttons-groups {
+  width: 100%;
+  background-color: #eee;
+  border: 1px solid #999;
+  .btn-group .btn {
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #999;
+    padding: 5px 20px;
+    color: #000;
+    border-radius: 0;
+  }
+  .btn-group .btn:hover,
+  .btn-group .bth:active,
+  .btn-group .btn:focus {
+    background-color: #999;
+    color: #fff;
+    outline: none !important;
+    border: none !important;
+  }
+}
+.head-title {
+  color: #4b5f88;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.main__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &--1 {
+    width: 50%;
+    margin: 0 20px;
+    // border-bottom: 2px solid #ccc;
+  }
+  &--2 {
+    width: 50%;
+    margin-right: 20px;
+    // border-bottom: 2px solid #ccc;
+  }
+}
+.table-1 {
+  margin-top: -8px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+.td-1 {
+  background-color: #eee;
+  border-color: transparent;
+  width: 30%;
+}
+td {
+  padding: 5px;
+}
+.table-2-dive {
+  margin-top: -17px;
+}
+.min {
+  width: 300px;
+  text-align: center;
+}
+h6 {
+  border-top: 2px solid #ccc;
+  padding: 5px 0 5px 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.SERIES_INFORMATION {
+  border-bottom: 2px solid #ccc;
+  margin: 0 20px;
+}
+.table-3 tr:nth-child(odd) {
+  background-color: #eee;
+}
+.table-3 {
+  width: 98%;
+  margin: 0 auto;
+}
+th {
+  font-size: 0.9rem;
+  font-weight: 500;
+}

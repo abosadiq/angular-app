@@ -1,0 +1,222 @@
+<div class="product-details">
+  <app-navbar></app-navbar>
+  <div *ngIf="detailItem" class="item-section">
+    <p class="selected-info">
+      Mechanical > {{ detailItem.series }} > <span>{{ detailItem.modal }}</span>
+    </p>
+    <div class="top-details">
+      <div class="top-details--1">
+        <img
+          src="{{ detailItem.img }}"
+          alt="fan image"
+          width="50"
+          height="50"
+        />
+        <p>Mechanical > {{ detailItem.series }} > {{ detailItem.modal }}</p>
+        <p class="specifications">
+          Past specifications: {{ detailItem.set_firm }} /
+          {{ detailItem.global }}
+        </p>
+      </div>
+      <button><span>Add to</span><i class="fa fa-sort-down"></i></button>
+    </div>
+    <div class="buttons-groups">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Product Summary</button>
+        <button type="button" class="btn btn-secondary">Product Details</button>
+        <button type="button" class="btn btn-secondary">
+          Product Documentation
+        </button>
+        <button type="button" class="btn btn-secondary">
+          Contact
+        </button>
+      </div>
+    </div>
+    <section>
+      <h4 class="head-title">Product Summary</h4>
+
+      <div class="main__box">
+        <div class="main__box--1">
+          <h6>DESCRIPTION</h6>
+          <table class="table table-1">
+            <tbody>
+              <tr>
+                <td class="td-1">Manufacturer</td>
+                <td>{{ detailItem.manufacture }}</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="td-1">Series</td>
+                <td>{{ detailItem.series }}</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="td-1">Model</td>
+                <td>{{ detailItem.modal }}</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table-2-dive">
+            <h6>TYPE</h6>
+            <table class="table table-1">
+              <tbody>
+                <tr>
+                  <td class="td-1">Use Type</td>
+                  <td>{{ detailItem.type }}</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="td-1">Application</td>
+                  <td>{{ detailItem.application }}</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="td-1">mounting location</td>
+                  <td>{{ detailItem.mounting_location }}</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="td-1">Accessories</td>
+                  <td>{{ detailItem.accessories }}</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="td-1">Model year</td>
+                  <td>{{ detailItem.modelYearStart }}</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="main__box--2">
+          <h6>TECHNICAL SPECIFICATIONS</h6>
+          <table class="table table-1">
+            <tbody>
+              <tr>
+                <td class="td-1">Airflow (CFM)</td>
+                <td>{{ detailItem.min_air_flow }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="td-1">Power (W)</td>
+                <td class="td-1 min">Min</td>
+                <td class="min">{{ detailItem.min_power }}</td>
+                <td class="td-1 min">Max</td>
+                <td class="min">{{ detailItem.max_power }}</td>
+                <td class="min"></td>
+              </tr>
+              <tr>
+                <td class="td-1">Operating voltage (VAC)</td>
+                <td class="td-1 min">Min</td>
+                <td class="min">{{ detailItem.min_operating_voltage }}</td>
+                <td class="td-1 min">Max</td>
+                <td class="min">{{ detailItem.max_operating_voltage }}</td>
+                <td class="min"></td>
+              </tr>
+              <tr>
+                <td class="td-1">Fan speed (RPM)</td>
+                <td class="td-1 min">Min</td>
+                <td class="min">{{ detailItem.min_fan_speed }}</td>
+                <td class="td-1 min">Max</td>
+                <td class="min">{{ detailItem.max_fan_speed }}</td>
+                <td class="min"></td>
+              </tr>
+              <tr>
+                <td class="td-1">Number of fan speeds</td>
+                <td>{{ detailItem.number_of_fan_speeds }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="td-1">Sound at max speed (dBA)</td>
+                <td>{{ detailItem.sound_at_max_speed }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="td-1">Fan sweep diameter (in)</td>
+                <td>{{ detailItem.fan_sweep_diameter }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="td-1">Height (in)</td>
+                <td class="td-1 min">Min</td>
+                <td class="min">{{ detailItem.min_height }}</td>
+                <td class="td-1 min">Max</td>
+                <td class="min">{{ detailItem.max_height }}</td>
+                <td class="min"></td>
+              </tr>
+              <tr>
+                <td class="td-1">Weight (lbs)</td>
+                <td>{{ detailItem.weight }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h4 class="head-title">Product Details</h4>
+      <h6 class="SERIES_INFORMATION">SERIES INFORMATION</h6>
+
+      <table class="table table-3">
+        <tbody>
+          <tr>
+            <th scope="row">Airfoils – Moso bamboo – 60” diameter</th>
+          </tr>
+          <tr>
+            <th scope="row">
+              Airfoil Finishes – Caramel Bamboo or Cocoa Bamboo
+            </th>
+          </tr>
+          <tr>
+            <th scope="row">
+              Hardware Finishes – Satin Nickel, Oil-Rubbed Bronze, Black or
+              White
+            </th>
+          </tr>
+          <tr>
+            <th>Motor – EC motor with digital inverter drive</th>
+          </tr>
+          <tr>
+            <th scope="row">
+              Exceeds ENERGY STAR fan efficiency requirements by up to 1200%
+            </th>
+          </tr>
+          <tr>
+            <th scope="row">
+              Controls – Remote control Remote control (included), Haiku Home
+              mobile app, Haiku Wall Control (optional), or Amazon Alexa-enabled
+              devices (optional)
+            </th>
+          </tr>
+          <tr>
+            <th scope="row">
+              Onboard Sensors – Ambient and surface temperature, relative
+              humidity, and passive infrared sensors enable SenseME technology.
+              Technology lets you automate your fan’s operation to maximize
+              convenience and energy savings
+            </th>
+          </tr>
+          <tr>
+            <th>Environment – Indoor use only.</th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>

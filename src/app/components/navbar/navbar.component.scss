@@ -1,0 +1,17 @@
+.navbar-expand {
+  background-image: linear-gradient(to left, #46aae5, #f0f0f0);
+  border-top: 1px solid blue;
+}
+.mynav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 100%;
+}
+.search-bar {
+  margin-top: 20px;
+  width: 20%;
+  app-searchbar {
+    width: 100%;
+  }
+}

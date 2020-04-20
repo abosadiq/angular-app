@@ -1,0 +1,25 @@
+.home-form {
+  display: flex;
+}
+.input-field {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+}
+.input-field:focus {
+  outline: none;
+  border: 1px solid #ac1cac;
+}
+.form-section {
+  height: 40px;
+  width: 100px;
+}
+.form-input {
+  width: 100%;
+  position: relative;
+}
+.fa-search {
+  position: relative;
+  bottom:  10px;
+}

@@ -1,0 +1,21 @@
+.login-container {
+  width: 40%;
+  margin: 0 auto;
+}
+.btn-position {
+  position: absolute;
+  top: -70%;
+  right: 0;
+  color: rgba($color: #000000, $alpha: 0.5);
+}
+.form-group {
+  position: relative;
+}
+.fa-user,
+.fa-lock {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+  font-size: 1.3rem;
+  color: rgba($color: #000000, $alpha: 0.5);
+}

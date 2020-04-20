@@ -1,0 +1,13 @@
+.sub-main {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-bottom: 40px;
+  h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  //   background: #46aae5;
+  background-image: -webkit-linear-gradient(top, #46aae5, #f0f0f0);
+  background-image: -moz-linear-gradient(top, #46aae5, #f0f0f0);
+  background-image: linear-gradient(to bottom, #46aae5, #f0f0f0);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

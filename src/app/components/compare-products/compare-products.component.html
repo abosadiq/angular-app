@@ -1,0 +1,198 @@
+<div class="compare">
+  <app-navbar></app-navbar>
+
+  <div class="main-div">
+    <div class="left-side">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="title">DESCRIPTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td">Manufacturer</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="td">Series</td>
+
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="td" style="padding: 0; padding-left: 7px;">Model</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="title">TYPE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Use Type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Application</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Mounting Location</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Accessories</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Model year</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="title" style="margin-top: -20px;">
+              TECHNICAL SPECIFICATIONS
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Airflow (CFM)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Power (W)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Operating voltage (VAC)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Fan speed (RPM)</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="right-table"
+      *ngFor="let item of compareItems && compareItems; index as i"
+    >
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" *ngIf="item">
+              <button>
+                <span>Add to</span><i class="fa fa-sort-down"></i>
+              </button>
+              <img
+                *ngIf="item.img"
+                class="item-img"
+                src="{{ item.img }}"
+                alt="myimge"
+              />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="td">{{ item.manufacture }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="td">{{ item.series }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.modal }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="title">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.type }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.application }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.mounting_location }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.accessories }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.modelYearStart }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.max_air_flow }} CFM</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.max_power }} W at max speed</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.min_operating_voltage }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>{{ item.max_fan_speed }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

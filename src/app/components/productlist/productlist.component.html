@@ -1,0 +1,204 @@
+<div class="list">
+  <app-navbar></app-navbar>
+  <button class="compare-button" *ngIf="isCampare" (click)="onCampare()">Campare Fans</button>
+  <div class="main__div">
+    <div class="main__div--left">
+      <div class="btns">
+        <h6>Search:</h6>
+        <div>
+          <button class="btn-1 save-btn">Save</button>
+          <button class="btn-1 clear-btn">Clear</button>
+        </div>
+      </div>
+      <div class="btns-2">
+        <button class="btn-1 btn-2-1 btn-prod">Product</button>
+        <button class="btn-1 btn-2-1 btn-proj">Project</button>
+      </div>
+      <div class="dropdown-1">
+        <h6>Product Type</h6>
+        <button (click)="toggle()" id="bt">
+          <i class="fa fa-sort-down"></i>
+        </button>
+      </div>
+      <ng-container *ngIf="show">
+        <div class="showdrop-down-1">
+          <h2>Model year:</h2>
+          <div>
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </div>
+      </ng-container>
+      <div class="dropdown-1">
+        <h6>Technical Specifications</h6>
+        <button (click)="toggle2()" id="bt">
+          <i class="fa fa-sort-down"></i>
+        </button>
+      </div>
+
+      <ng-container *ngIf="show2">
+        <div class="showdrop-down-2">
+          <h2>
+            <span class="arrows">
+              <i class="fas fa-long-arrow-alt-up"></i>
+              <i class="fas fa-long-arrow-alt-down"></i>
+            </span>
+            Airflow (CFM)
+          </h2>
+          <div class="airflow">
+            <div class="flex">
+              <input type="text" />
+              <ng5-slider
+                [(value)]="value"
+                [(highValue)]="highValue"
+                [options]="options"
+              ></ng5-slider>
+              <input type="text" />
+            </div>
+          </div>
+          <h2 style="margin-top: 20px;">
+            <span class="arrows">
+              <i class="fas fa-long-arrow-alt-up"></i>
+              <i class="fas fa-long-arrow-alt-down"></i>
+            </span>
+            Max power (W)
+          </h2>
+          <div class="airflow">
+            <div class="flex">
+              <input type="text" />
+              <ng5-slider
+                [(value)]="value"
+                [(highValue)]="highValue2"
+                [options]="options2"
+              ></ng5-slider>
+              <input type="text" />
+            </div>
+          </div>
+          <h2 style="margin-top: 20px;">
+            <span class="arrows">
+              <i class="fas fa-long-arrow-alt-up"></i>
+              <i class="fas fa-long-arrow-alt-down"></i>
+            </span>
+            Sound at max speed (dBA)
+          </h2>
+          <div class="airflow">
+            <div class="flex">
+              <input type="text" />
+              <ng5-slider
+                [(value)]="value"
+                [(highValue)]="highValue3"
+                [options]="options3"
+              ></ng5-slider>
+              <input type="text" />
+            </div>
+          </div>
+          <h2 style="margin-top: 20px;">
+            <span class="arrows">
+              <i class="fas fa-long-arrow-alt-up"></i>
+              <i class="fas fa-long-arrow-alt-down"></i>
+            </span>
+            Fan sweep diameter (in)
+          </h2>
+          <div class="airflow">
+            <div class="flex">
+              <input type="text" />
+              <ng5-slider
+                [(value)]="value"
+                [(highValue)]="highValue3"
+                [options]="options3"
+              ></ng5-slider>
+              <input type="text" />
+            </div>
+          </div>
+          <h2 style="margin-top: 20px;">
+            <span class="arrows">
+              <i class="fas fa-long-arrow-alt-up"></i>
+              <i class="fas fa-long-arrow-alt-down"></i>
+            </span>
+            Fan sweep diameter (in)
+          </h2>
+          <div class="airflow">
+            <div class="flex">
+              <input type="text" />
+              <ng5-slider
+                [(value)]="value"
+                [(highValue)]="highValue3"
+                [options]="options3"
+              ></ng5-slider>
+              <input type="text" />
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <div class="dropdown-1">
+        <h6>Brand</h6>
+        <button id="bt">
+          <i class="fa fa-sort-down"></i>
+        </button>
+      </div>
+      <div class="dropdown-1">
+        <h6>Product Type</h6>
+        <button (click)="toggle3()" id="bt">
+          <i class="fa fa-sort-down"></i>
+        </button>
+      </div>
+      <ng-container *ngIf="show3">
+        <div class="showdrop-down-1">
+          <h2>Model year:</h2>
+          <div>
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="main__div--right">
+      <div class="list-section" *ngFor="let item of lists && lists; index as i">
+        <div *ngIf="item" class="item-section">
+          <img
+            *ngIf="item.img"
+            class="item-img"
+            src="{{ item.img }}"
+            (click)="onClick(item)"
+          />
+          <div class="top-info">
+            <p>{{ item.manufacture }}</p>
+            <p>{{ item.series }}</p>
+            <p>{{ item.modal }}</p>
+          </div>
+
+          <div class="med-info">
+            <p>{{ item.max_air_flow }} CFM</p>
+            <p>{{ item.max_power }} W at max speed</p>
+            <p>{{ item.sound_at_max_speed }} dBA at max speed</p>
+            <p>{{ item.number_of_fan_speeds }}" fan sweep diameter</p>
+          </div>
+          <div class="bottom-info">
+            <h6>
+              Past specifications:
+              <p>{{ item.set_firm }} / {{ item.global }}</p>
+            </h6>
+          </div>
+
+          <div class="compare-to">
+            <div>
+              compareItem
+              <form [formGroup]="checkForm" novalidate>
+                <!-- (ngSubmit)="submitForm()" -->
+                <!-- Form elements goes here -->
+                <label for="compare">Compare</label>
+
+                <input
+                  type="checkbox"
+                  value="compare{{ i }}"
+                  (change)="onCheckboxChange($event, item)"
+                />
+              </form>
+            </div>
+            <button><span>Add to</span><i class="fa fa-sort-down"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
